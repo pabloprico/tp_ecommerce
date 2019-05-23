@@ -1,3 +1,5 @@
+/* Css header falta emprolijar/sacar cosas que están de más, pero funciona bien */
+
 * {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -24,8 +26,34 @@ header {
   width: 100%;
   margin: 0;
   padding: 20px 10px;
-  /**background: linear-gradient(#ffffff, #ececec);*/
-  /*background: linear-gradient(rgb(140, 150, 240), rgb(90, 90, 160))/*(rgb(134, 133, 210), rgb(85, 87, 140))*/
+}
+
+nav ul{
+  display: flex;
+  width: 100%;
+  padding: 0px;
+}
+
+nav ul li{
+  list-style-type: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#menu_living{
+  display: ;
+  flex-direction: column;
+
+}
+
+#menu_living li{
+  text-align: center;
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+
+#menu_living li a{
+  text-align: center;
 }
 
 #categorias{
@@ -33,6 +61,7 @@ header {
   width: 70%;
   align-self: center;
   align-content: center;
+  justify-content: center;
   display: none;
 }
 
@@ -42,7 +71,7 @@ header {
   align-self: center;
 }
 
-nav a{
+nav ul li a{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,16 +83,16 @@ nav a{
   transition: all 400ms ease;
 }
 
-#categorias a{
+#categorias ul li a{
   align-items: center;
 }
 
-#categorias a:hover{
+#categorias ul li a:hover{
   transition: all 330ms ease-in;
   color: rgb(120, 120, 120);
 }
 
-#otros a:hover {
+#otros ul li a:hover {
     transition: all 330ms ease-in;
     color: rgb(130, 130, 130);
 }
@@ -75,6 +104,10 @@ nav a{
 }
 
 }
+
+/* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
+/* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
+/* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
 
 @media (min-width:768px){
 
@@ -89,8 +122,6 @@ nav a{
     width: 100%;
     margin: 0;
     padding: 20px 10px;
-    /**background: linear-gradient(#ffffff, #ececec);*/
-    /*background: linear-gradient(rgb(140, 150, 240), rgb(90, 90, 160))/*(rgb(134, 133, 210), rgb(85, 87, 140))*/
   }
 
   #categorias{
@@ -98,6 +129,7 @@ nav a{
     width: 70%;
     align-self: center;
     align-content: center;
+    height: 50px;
   }
 
   #otros{
@@ -106,7 +138,7 @@ nav a{
     align-self: center;
   }
 
-  nav a{
+  nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,16 +150,57 @@ nav a{
     transition: all 400ms ease;
   }
 
-  #categorias a{
+  #categorias ul li a{
     align-items: center;
   }
 
-  #categorias a:hover{
+  #categorias ul li a:hover{
     transition: all 330ms ease-in;
     color: rgb(120, 120, 120);
   }
 
-  #otros a:hover {
+  #categorias ul li a{
+    height: 44px;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  #categorias ul li a:hover{
+    transition: all 200ms ease-in;
+    border-bottom: 4px solid  rgb(55, 55, 55);
+    color: rgb(120, 120, 120);
+  }
+
+  #menu_living {
+    display: none;
+    position: absolute;
+  }
+
+   li:hover > #menu_living{
+    display: block;
+  }
+
+  #menu_living li{
+    position: relative;
+    width: 150px;
+  }
+
+  #categorias ul li #menu_living li a{
+      height: 50px;
+      /*align-items: center;*/
+      padding-left: 15px;
+      padding-top: 15px;
+      justify-content: flex-start;
+      border-bottom: none;
+      color: white;
+  }
+
+  #categorias ul li #menu_living li a:hover{
+        border-bottom: none;
+        color: grey;
+    }
+
+  #otros ul li a:hover {
       transition: all 330ms ease-in;
       color: rgb(130, 130, 130);
   }
@@ -135,15 +208,21 @@ nav a{
 
 }
 
+/* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
+/* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
+/* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
+
 @media (min-width:1200px) {
   header {
+    position: fixed;
+    top:0px;
     align-items: center;
     height: 100px;
     padding: 20px 60px;
   }
 
   #categorias{
-    width: 50%;
+    width: 40%;
     height: 50px;
     align-self: center;
     align-content: center;
@@ -155,27 +234,57 @@ nav a{
     align-self: center;
   }
 
-  nav a{
+  nav ul li a{
     justify-content: center;
     align-items: center;
     text-align: center;
     border-bottom: 1px solid rgb(249, 249, 249);
   }
 
-  #categorias a{
+  #categorias ul li a{
     padding-top: 2.3%;
-    height: 73px;
+    height: 59px;
     align-items: stretch;
     justify-content: center;
   }
 
-  #categorias a:hover{
-    transition: all 330ms ease-in;
-    border-bottom: 4px solid black;
+  #categorias ul li a:hover{
+    transition: all 200ms ease-in;
+    border-bottom: 4px solid  rgb(55, 55, 55);
     color: rgb(120, 120, 120);
   }
 
-  #otros a:hover {
+  #menu_living {
+    display: none;
+    position: absolute;
+  }
+
+   li:hover > #menu_living{
+    display: block;
+  }
+
+  #menu_living li{
+    position: relative;
+    width: 150px;
+  }
+
+  #categorias ul li #menu_living li a{
+      height: 50px;
+      /*align-items: center;*/
+      padding-left: 15px;
+      padding-top: 15px;
+      justify-content: flex-start;
+      border-bottom: none;
+      color: white;
+  }
+
+
+  #categorias ul li #menu_living li a:hover{
+        border-bottom: none;
+        color: grey;
+    }
+
+  #otros ul li a:hover {
       transition: all 330ms ease-in;
       color: rgb(130, 130, 130);
   }
