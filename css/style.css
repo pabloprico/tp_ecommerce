@@ -1,0 +1,341 @@
+@import "https://fonts.googleapis.com/css?family=Lato|Lora&display=swap";
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+
+
+body {
+  box-sizing:border-box;
+}
+
+a {
+  display:inline-block;
+  text-decoration:none;
+  color:inherit;
+}
+
+.instagram-feed{
+  width:90%;
+  margin: auto;
+}
+
+.instagram-2,
+.instagram-3,
+.instagram-4 {
+  display: none;
+}
+
+
+.instagram-photos img {
+  width:100%;
+  height:380px;
+  margin-right: 5%;
+}
+
+.section-header_title{
+  font-family: 'Lato', sans-serif;
+  font-size:1em;
+  text-align: center;
+  letter-spacing:1px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.footer-newsletter{
+  width:90%;
+  margin:auto;
+}
+
+.footer-newsletter h3{
+  font-family: 'Lora', serif;
+  font-size:2em;
+  font-weight:400;
+  text-align: center;
+}
+
+.footer-newsletter p {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  font-size:0.9em;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom:10%
+}
+
+.subscription-form{
+  text-align: center;
+  width:100%;
+}
+
+.subscription-form input{
+  line-height: 3;
+  width:60%;
+  font-family: 'Lora', serif;
+  padding-left:5%;
+}
+
+.subscription-form button{
+  line-height: 3;
+  width:30%;
+  background-color: black;
+  color:white;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+  border:none;
+  font-size:0.9em;
+  margin-left:-5px;
+  align-self: center;
+  border-bottom: 0.6px solid black;
+}
+
+.link-list{
+  width: 90%;
+  margin: auto;
+  padding-top:5%;
+}
+
+.link-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.link-list h5 {
+  font-family: 'Lato', sans-serif;
+  font-size:1em;
+  font-weight:400;
+  text-align: center;
+}
+
+.link-list a{
+  font-family: 'Lora', serif;
+  font-size:0.8em;
+
+}
+
+.link-list li{
+  margin-right: 5%;
+  margin-left:5%;
+  text-align: center;
+}
+
+.links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-media{
+  width:90%;
+  margin:20% auto;
+  text-align: center;
+}
+
+.social-media a{
+  margin-right:2%;
+}
+
+footer p{
+  font-family: 'Lora', serif;
+  font-size:0.8em;
+  text-align: center;
+  padding:10% 0;
+}
+
+.form-container{
+  width:90%;
+  margin: auto;
+}
+
+.form-container h1{
+  font-family:'Lora', serif;
+  font-size:2.5em;
+  text-align: center;
+  font-weight:400;
+}
+
+.field-group{
+  padding-bottom:5%;
+}
+
+.field-group input{
+  width:100%;
+  line-height: 2;
+  padding-left: 5px;
+}
+
+.field-group label{
+  display: block;
+  font-family: 'Lato', sans-serif;
+  padding-bottom:2%;
+}
+
+.remember-me{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.remember-me input{
+  display: inline-block;
+  vertical-align: middle;
+  margin:0;
+
+}
+.remember-me label{
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+}
+
+.login-links{
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  display:block;
+  font-size:1em;
+  padding:10% 0;
+}
+
+.login-button,
+.register-button {
+  display: flex;
+  justify-content: center;
+}
+
+
+.login-button button,
+.register-button button{
+  line-height: 3;
+  width:40%;
+  background-color: black;
+  color:white;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+  border:none;
+  border-radius:3%;
+  font-size:0.9em;
+  margin:0 auto;
+}
+
+
+.register-button{
+  margin-bottom:20%;
+  margin-top:5%;
+}
+
+.register-button :hover,
+.login-button :hover{
+  background-color: white;
+  color: black;
+  border:1px solid black;
+}
+
+
+@media only screen and (min-width:600px) {
+  .form-container{
+    width:40%;
+    margin-bottom: 65%;
+  }
+
+  .instagram-photos{
+    display: flex;
+    justify-content: space-between;
+    }
+
+  .instagram-photos img {
+    width:47.5%;
+    height:380px;
+    margin-right: 0;
+  }
+
+  .instagram-2{
+    display:inline-block;
+  }
+
+
+  .footer-newsletter{
+    width:50%;
+    margin:0;
+    padding:0;
+  }
+
+  .site-footer{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link-list,
+  .links{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .link-list h5{
+    margin-top:0;
+  }
+
+  .footer-container{
+    width:90%;
+    margin: 10% auto 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .link-list a{
+    margin-bottom:20%;
+  }
+
+  .footer-newsletter p,
+  .footer-newsletter h3{
+    padding:0;
+    text-align: left;
+  }
+
+  .footer-newsletter h3{
+    font-size: 2em;
+    margin-top:0;
+  }
+  .subscription-form{
+    text-align: left;
+  }
+
+  .social-media{
+    text-align: left;
+    margin:5% 5% 10%;
+  }
+
+  footer p{
+    padding:3% 0;
+  }
+}
+
+
+@media only screen and (min-width:800px) {
+  .form-container{
+    margin-bottom: 10%;
+  }
+
+  .instagram-photos img {
+    width:23%;
+    height:380px;
+    margin-right: 0;
+  }
+
+  .instagram-3,
+  .instagram-4{
+    display:inline-block;
+  }
+
+
+  .footer-newsletter{
+    width:35%;
+  }
+
+  .site-footer{
+    width:35%;
+  }
+
+  .social-media{
+    margin-top:2.5%;
+  }
+
+}
