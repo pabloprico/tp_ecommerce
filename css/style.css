@@ -1,3 +1,4 @@
+
 @import "https://fonts.googleapis.com/css?family=Lato|Lora&display=swap";
 @import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 
@@ -345,6 +346,172 @@ footer p{
 
 }
 
+@import "normalize.css";
+
+section * {
+  box-sizing: border-box;
+}
+
+section ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* --------------- CONTAINER PRINCIPAL ------------ */
+section .container{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* --------------- /CONTEINER PRINCIPAL ------------ */
+
+
+
+
+/* --------------- IMAGEN PRINCIPAL ------------ */
+section .img-principal{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}/*//.img-principal  DIV */
+section .main-img-full{
+  display: none;
+}
+
+section .imagen-principal-mobile{
+  max-width: 100%;
+}/*//.imagen-principal-mobile IMG*/
+/* --------------- /IMAGEN PRINCIPAL ------------ */
+
+
+
+
+/* --------------- BARRA SEPARADORA ------------ */
+section .separador-container{
+  width: 100%;
+  position: relative;
+  text-align: center;
+}/*//.separador-container DIV */
+
+section .separador-container .texto-barra-separadora span{
+  position: absolute;
+  color: rgba(80,80,80,0.75);
+  left: 50%;
+  top: 50%;
+  transform: translate(-51%, -52%);
+  background-color: white;
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+} /*//.texto-barra-separadora DIV */
+
+section .separador-container .barra-separadora{
+  border: none;
+  border-top: solid 1px rgba(80,80,80,0.2);
+  border-bottom: solid 1px rgba(80,80,80,0.2);
+  max-width: 90%;
+  margin: 30px auto;
+  border-radius: 5px;
+}/*//.barra-separadora DIV */
+
+/* --------------- /BARRA SEPARADORA ------------ */
+
+
+
+
+/* --------------- ARTICULO Destacados ------------ */
+
+article .container-articulo-img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* -------------------- */
+
+.img-articulo-destacado2, .img-articulo-destacado3, .img-articulo-destacado4, .img-articulo-destacado5{
+  display: none;
+}
+
+.img-articulo-destacado1{
+  max-width:100%;
+}
+
+
+/* --------------- /ARTICULO Destacados ------------ */
+
+
+
+
+/* --------------- ARTICULO CATEGORIAS ------------ */
+
+.lista-categorias{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-articulo-categoria{
+  width: 298px;
+  height: 120px;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.container-articulo-categoria strong{
+  width: 100%;
+  background-color: rgba(87, 87, 87, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 15px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 19px;
+  transition: background-color .5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-51%, -52%);
+}
+
+.cat1{
+  background-image: url(../img/cat1.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.75;
+}
+.cat2{
+  background-image: url(../img/cat2.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.75;
+}
+.cat3{
+  background-image: url(../img/cat3.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.75;
+}
+.cat4{
+  background-image: url(../img/cat4.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.75;
+}
+/* --------------- /ARTICULO CATEGORIAS ------------ */
+
 /* Css header falta emprolijar/sacar cosas que están de más, pero funciona bien */
 
 * {
@@ -552,6 +719,68 @@ nav ul li a{
       color: rgb(130, 130, 130);
   }
 
+  /* ************************ MAIN SECTION min-768 PX***************************************/
+section .imagen-principal-mobile{
+  display: none;
+}
+
+section .main-img-full{
+  display: flex;
+  max-width: 100%;
+}
+
+
+/* --------------- ARTICULO Destacados 768------------ */
+
+article .container-articulo-img{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 8px;
+}
+.img-articulo-destacado5{
+  display: none;
+}
+.img-articulo-destacado1, .img-articulo-destacado2, .img-articulo-destacado3, .img-articulo-destacado4{
+  display: inline;
+  width: 23%;
+  margin: 0;
+  padding: 0;
+}
+/* --------------- /ARTICULO Destacados 768------------ */
+
+
+.lista-categorias{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 768px;
+}
+
+.container-articulo-categoria{
+    width: 380px;
+    height: 220px;
+}
+.container-articulo-categoria strong{
+    width: 98%;
+    background-color: rgba(87, 87, 87, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 15px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 19px;
+    transition: background-color .5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, -52%);
+}
+
+
+  /* **************************** MAIN SECTION min-768 PX**************************************/
 
 }
 
@@ -635,6 +864,41 @@ nav ul li a{
       transition: all 330ms ease-in;
       color: rgb(130, 130, 130);
   }
+  /* **************************** MAIN SECTION min1200 PX**************************************/
+
+  /* --------------- ARTICULO Destacados 1280------------ */
+
+  article .container-articulo-img{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 8px;
+  }
+
+  .img-articulo-destacado1, .img-articulo-destacado2, .img-articulo-destacado3, .img-articulo-destacado4, .img-articulo-destacado5{
+    display: inline;
+    width: 19.5%;
+    margin: 0;
+    padding: 0;
+  }
+  /* --------------- /ARTICULO Destacados 1280------------ */
+
+  .lista-categorias{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: 100%;
+  }
+
+  .container-articulo-categoria{
+      width: 24%;
+      height: 300px;
+  }
+
+    /* **************************** MAIN SECTION min1200 PX**************************************/
 
 }
 
