@@ -1,7 +1,104 @@
-<<<<<<< HEAD
 @import "normalize.css";
+/* Css header falta emprolijar/sacar cosas que están de más, pero funciona bien */
 
-section * {
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0px
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
+
+header {
+  position: sticky;
+  z-index: 1;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  background-color:rgb(249, 249, 249);
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  padding: 20px 10px;
+}
+
+nav ul{
+  display: flex;
+  width: 100%;
+  padding: 0px;
+}
+
+nav ul li{
+  list-style-type: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#menu_living{
+  display: ;
+  flex-direction: column;
+
+}
+
+#menu_living li{
+  text-align: center;
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+
+#menu_living li a{
+  text-align: center;
+}
+
+#categorias{
+  display: flex;
+  width: 70%;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  display: none;
+}
+
+#otros{
+  display: flex;
+  width: 45%;
+  align-self: center;
+}
+
+nav ul li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: all 400ms ease;
+}
+
+#categorias ul li a{
+  align-items: center;
+}
+
+#categorias ul li a:hover{
+  transition: all 330ms ease-in;
+  color: rgb(120, 120, 120);
+}
+
+#otros ul li a:hover {
+    transition: all 330ms ease-in;
+    color: rgb(130, 130, 130);
+}
+
+section {
   box-sizing: border-box;
 }
 
@@ -39,13 +136,16 @@ section .img-principal{
   display: flex;
   justify-content: center;
 }/*//.img-principal  DIV */
-section .main-img-full{
-  display: none;
-}
 
 section .imagen-principal-mobile{
   max-width: 100%;
 }/*//.imagen-principal-mobile IMG*/
+
+section .main-img-full{
+  display: none;
+}
+
+
 /* --------------- /IMAGEN PRINCIPAL ------------ */
 
 
@@ -164,112 +264,90 @@ article .container-articulo-img{
   opacity: 0.75;
 }
 /* --------------- /ARTICULO CATEGORIAS ------------ */
-=======
-/* Css header falta emprolijar/sacar cosas que están de más, pero funciona bien */
 
-* {
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-body {
-  margin: 0px
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%
-}
-
-header {
-  position: sticky;
-  z-index: 1;
-  top: 0px;
-  display: flex;
-  align-items: center;
-  background-color:rgb(249, 249, 249);
-  height: 70px;
+/* -**************************- PREGUNTAS FRECUENTES -************************- */
+section .container .container-preguntas{
   width: 100%;
-  margin: 0;
-  padding: 20px 10px;
-}
-
-nav ul{
   display: flex;
-  width: 100%;
-  padding: 0px;
-}
-
-nav ul li{
-  list-style-type: none;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
-#menu_living{
-  display: ;
   flex-direction: column;
-
+  align-items: center;
 }
 
-#menu_living li{
-  text-align: center;
-  background-color: rgb(55, 55, 55);
-  color: white;
+section .buscador{
+  margin: 15px 0;
+}
+section .container hr{
+  background-color: red;
+  width: 80%;
 }
 
-#menu_living li a{
-  text-align: center;
-}
-
-#categorias{
+section .tabs { /* --- Contenedor de las tabs ----- */
   display: flex;
-  width: 70%;
-  align-self: center;
-  align-content: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+section .pestana {
+  position: absolute;
+  opacity: 0;
+}
+
+section .label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+section .label:hover {
+  background: #d8d8d8;
+}
+
+section .label:active {
+  background: #ccc;
+}
+
+section .pestana:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+section .pestana:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+section .panel { /* --- Contenido dentro tabs ----- */
   display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
 }
 
-#otros{
-  display: flex;
-  width: 45%;
-  align-self: center;
+section .pestana:checked + .label + .panel {
+  display: block;
 }
 
-nav ul li a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  flex-shrink: 1;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  transition: all 400ms ease;
-}
-
-#categorias ul li a{
-  align-items: center;
-}
-
-#categorias ul li a:hover{
-  transition: all 330ms ease-in;
-  color: rgb(120, 120, 120);
-}
-
-#otros ul li a:hover {
-    transition: all 330ms ease-in;
-    color: rgb(130, 130, 130);
-}
-
+/* -**************************- ///PREGUNTAS FRECUENTES -************************- */
 @media (min-width:500px){
 
 #otros{
     width: 35%;
 }
 
+
+@media (min-width: 600px) {
+  section .label {
+    width: auto;
+  }
+  section .panel {
+    order: 99;
+  }
 }
 
 /* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
@@ -443,7 +521,8 @@ article .container-articulo-img{
 
 @media (min-width:1200px) {
   header {
-    position: fixed;
+    /*position: fixed; Se prueba con sticky para que no se encime el menus sobre la web despues de los 1200*/
+    position: sticky;
     top:0px;
     align-items: center;
     height: 100px;
@@ -517,6 +596,8 @@ article .container-articulo-img{
       transition: all 330ms ease-in;
       color: rgb(130, 130, 130);
   }
+
+  /*el position fixed del header de arriba se pone por encima de la pagina.
   /* **************************** MAIN SECTION min1200 PX**************************************/
 
   /* --------------- ARTICULO Destacados 1280------------ */
@@ -558,4 +639,3 @@ article .container-articulo-img{
 /* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
 /* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
 /* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
->>>>>>> 4734946e82b58c3841f0faf30efe2830b5b5dd51
