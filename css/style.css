@@ -415,9 +415,10 @@ section .pestana:checked + .label + .panel {
   font-family: 'Lato', sans-serif;
   border:none;
   font-size:0.9em;
-  margin-left:-5px;
+  margin-left:-10px;
   align-self: center;
-  border-bottom: 0.6px solid black;
+  border-bottom: 4.5px solid black;
+  border-top: 4.5px solid black;
 }
 
 .link-list{
@@ -478,7 +479,7 @@ footer p{
 
 .form-container{
   width:90%;
-  margin: 15% auto;
+  margin: auto;
 }
 
 .form-container h1{
@@ -550,8 +551,8 @@ footer p{
   color:white;
   letter-spacing: 2px;
   font-family: 'Lato', sans-serif;
-  border:none;
-  border-radius:3%;
+  border:1px solid black;
+  border-radius:4%;
   font-size:0.9em;
   margin:0 auto;
 }
@@ -588,7 +589,7 @@ footer p{
 }
 
 /****** footer /LOGIN/REGISTER ********/
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:500px) {
   .form-container{
     width:40%;
     margin-bottom: 65%;
@@ -608,8 +609,9 @@ footer p{
   .instagram-2{
     display:inline-block;
   }
+}
 
-
+@media only screen and (min-width:600px){
   .footer-newsletter{
     width:50%;
     margin:0;
@@ -838,23 +840,24 @@ article .container-articulo-img{
 }
 
 /****** footer /LOGIN/REGISTER ********/
-@media only screen and (min-width:800px) {
+@media only screen and (min-width:768px) {
   .form-container{
     margin-bottom: 10%;
   }
 
   .instagram-photos img {
-    width:23%;
-    height:380px;
+    width:30%;
+    height:250px;
     margin-right: 0;
   }
 
-  .instagram-3,
-  .instagram-4{
+  .instagram-3{
     display:inline-block;
   }
+}
 
 
+@media only screen and (min-width:840px){
   .footer-newsletter{
     width:35%;
   }
@@ -868,6 +871,20 @@ article .container-articulo-img{
   }
 
 }
+
+@media only screen and (min-width:1200px) {
+  .instagram-photos img {
+    width:23%;
+    height:300px;
+    margin-right: 0;
+  }
+
+  .instagram-4{
+    display:inline-block;
+  }
+}
+
+
 /****** footer /LOGIN/REGISTER ********/
 
 /* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
