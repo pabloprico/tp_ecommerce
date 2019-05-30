@@ -6,17 +6,22 @@
 
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
   margin: 0px
 }
 
+.banner_negro {
+  display: none;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
-  width: 100%
+  width: 100%;
+  align-items: center;
 }
 
 header {
@@ -25,11 +30,28 @@ header {
   top: 0px;
   display: flex;
   align-items: center;
-  background-color:rgb(249, 249, 249);
+  background-color:white;
   height: 70px;
   width: 100%;
   margin: 0;
   padding: 20px 10px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+h1{
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  width: 130px;
+  transition: 500ms all ease;
+}
+
+h1:hover{
+  color: grey;
 }
 
 nav ul{
@@ -45,9 +67,10 @@ nav ul li{
 }
 
 #menu_living{
-  display: ;
-  flex-direction: column;
-
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(55, 55, 55);
+  width:170px;
 }
 
 #menu_living li{
@@ -61,12 +84,12 @@ nav ul li{
 }
 
 #categorias{
-  display: flex;
-  width: 70%;
-  align-self: center;
-  align-content: center;
-  justify-content: center;
   display: none;
+}
+
+#categorias #menu_living ul{
+  display: flex;
+  flex-direction: column;
 }
 
 #otros{
@@ -93,13 +116,54 @@ nav ul li a{
 
 #categorias ul li a:hover{
   transition: all 330ms ease-in;
-  color: rgb(120, 120, 120);
+  color: rgb(244, 190, 30);
 }
 
 #otros ul li a:hover {
     transition: all 330ms ease-in;
-    color: rgb(130, 130, 130);
+    color: rgb(244, 190, 30);
 }
+
+#otros {
+  width:35%;
+}
+
+#otros .search{
+  width: 90%;
+  display: none;
+  margin-left: 4%;
+}
+
+#otros .search fieldset{
+background-color: white;
+border: 1px solid #333;
+border-radius: 20px;
+padding: 0;
+}
+
+#otros .search input{
+ color: #666;
+ border: none;
+ width: 83%;
+ border-radius: 20px;
+ background-color: white;
+ height: 27px;
+}
+
+#otros .search button{
+  background-color: white;
+  border: none;
+  width: 10%;
+  color:black;
+  border-radius: 20px;
+  padding: 0px 5px 0px 0px;
+  margin: 0px;
+}
+
+header .fas{
+  line-height: 2
+}
+
 
 section {
   box-sizing: border-box;
@@ -686,16 +750,55 @@ footer p{
     top: 0px;
     display: flex;
     align-items: center;
-    background-color:rgb(249, 249, 249);
+    background-color:white;
     height: 70px;
     width: 100%;
     margin: 0;
     padding: 20px 10px;
   }
 
+  .banner_negro{
+    background-color: black;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .banner_negro p{
+    color: white;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .banner_negro li:hover{
+    color: grey;
+    transition: 250ms all ease;
+  }
+
+  .banner_negro ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 28%;
+    justify-content: space-around;
+  }
+
+  .banner_negro ul a{
+    text-decoration: none;
+  }
+
+  .banner_negro ul li{
+    color: white;
+
+  }
+
   #categorias{
     display: flex;
-    width: 70%;
+    width: 50%;
     align-self: center;
     align-content: center;
     height: 50px;
@@ -725,7 +828,7 @@ footer p{
 
   #categorias ul li a:hover{
     transition: all 330ms ease-in;
-    color: rgb(120, 120, 120);
+    color: rgb(244, 190, 30);
   }
 
   #categorias ul li a{
@@ -736,22 +839,27 @@ footer p{
 
   #categorias ul li a:hover{
     transition: all 200ms ease-in;
-    border-bottom: 4px solid  rgb(55, 55, 55);
-    color: rgb(120, 120, 120);
+    border-bottom: 4px solid rgb(244, 190, 30);;
+    color: rgb(244, 190, 30);
   }
 
   #menu_living {
     display: none;
     position: absolute;
+    flex-direction: row;
+  }
+
+  #menu_living ul{
+    border-left: 1px solid rgb(65, 65, 65);
   }
 
    li:hover > #menu_living{
-    display: block;
+    display: flex;
   }
 
   #menu_living li{
     position: relative;
-    width: 150px;
+    width: 120px;
   }
 
   #categorias ul li #menu_living li a{
@@ -766,13 +874,87 @@ footer p{
 
   #categorias ul li #menu_living li a:hover{
         border-bottom: none;
-        color: grey;
+        color: rgb(244, 190, 30);
     }
 
   #otros ul li a:hover {
       transition: all 330ms ease-in;
-      color: rgb(130, 130, 130);
+      color: rgb(244, 190, 30);
   }
+
+  /*#otros {
+    width:20%;
+  }
+
+  #otros .search{
+    width: 90%;
+    display: inline-block;
+    margin-left: 4%;
+  }
+
+  #otros .search fieldset{
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 0;
+  }
+
+  #otros .search input{
+   color: #666;
+   border: none;
+   width: 83%;
+   border-radius: 20px;
+   background-color: white;
+   height: 27px;
+  }
+
+  #otros .search button{
+    background-color: white;
+    border: none;
+    width: 10%;
+    color:black;
+    border-radius: 20px;
+  }
+  /*--------------*/
+  #otros {
+    width: 24%;
+  }
+
+  #pruebaa {
+    width: 60%;
+  }
+
+  #otros .search{
+    width: 90%;
+    display: inline-block;
+    margin-left: 4%;
+  }
+
+  #otros .search fieldset{
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 0;
+  }
+
+  #otros .search input{
+   color: #666;
+   border: none;
+   width: 75%;
+   border-radius: 20px;
+   background-color: white;
+   height: 27px;
+  }
+
+  #otros .search button{
+    background-color: white;
+    border: none;
+    width: 10%;
+    color:black;
+    border-radius: 20px;
+    padding: 0px 17px 0px 0px;
+  }
+
 
   /* ************************ MAIN SECTION min-768 PX***************************************/
 section .imagen-principal-mobile{
@@ -892,6 +1074,16 @@ article .container-articulo-img{
 /* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
 
 @media (min-width:1200px) {
+
+  .banner_negro ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 17%;
+    justify-content: space-around;
+  }
+
   header {
     /*position: fixed; Se prueba con sticky para que no se encime el menus sobre la web despues de los 1200*/
     position: sticky;
@@ -901,16 +1093,19 @@ article .container-articulo-img{
     padding: 20px 60px;
   }
 
+
+  h1{
+    width: 100%;
+  }
+
   #categorias{
-    width: 40%;
+    width: 35%;
     height: 50px;
-    align-self: center;
-    align-content: center;
+    margin-left: 2%;
   }
 
   #otros{
     width: 14%;
-    height: 35px;
     align-self: center;
   }
 
@@ -930,23 +1125,24 @@ article .container-articulo-img{
 
   #categorias ul li a:hover{
     transition: all 200ms ease-in;
-    border-bottom: 4px solid  rgb(55, 55, 55);
-    color: rgb(120, 120, 120);
+    border-bottom: 4px solid rgb(244, 190, 30);
+    color: rgb(244, 190, 30);
   }
 
   #menu_living {
     display: none;
     position: absolute;
+    flex-direction: row;
   }
 
    li:hover > #menu_living{
-    display: block;
+    display:  flex;
   }
 
   #menu_living li{
     position: relative;
-    width: 150px;
   }
+
 
   #categorias ul li #menu_living li a{
       height: 50px;
@@ -961,13 +1157,52 @@ article .container-articulo-img{
 
   #categorias ul li #menu_living li a:hover{
         border-bottom: none;
-        color: grey;
+        color: rgb(244, 190, 30);
     }
 
   #otros ul li a:hover {
       transition: all 330ms ease-in;
-      color: rgb(130, 130, 130);
+      color: rgb(244, 190, 30);
   }
+
+  #otros {
+    width: 24%;
+  }
+
+  #pruebaa {
+    width: 45%;
+  }
+
+  #otros .search{
+
+  }
+
+  #otros .search fieldset{
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 0;
+  }
+
+  #otros .search input{
+   color: #666;
+   border: none;
+   width: 80%;
+   border-radius: 20px;
+   background-color: white;
+   height: 27px;
+   padding: 0px 13px;
+  }
+
+  #otros .search button{
+    background-color: white;
+    border: none;
+    width: 10%;
+    color:black;
+    border-radius: 20px;
+  }
+
+
 
   /*el position fixed del header de arriba se pone por encima de la pagina.
   /* **************************** MAIN SECTION min1200 PX**************************************/
