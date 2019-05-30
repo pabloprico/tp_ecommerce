@@ -810,6 +810,10 @@ footer p{
     align-self: center;
   }
 
+  #menu_hamburguesa {
+    display: none;
+  }
+
   nav ul li a{
     display: flex;
     justify-content: center;
