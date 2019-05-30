@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Lato|Lora&display=swap";
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 @import "normalize.css";
 
@@ -48,10 +49,11 @@ h1{
   margin: 0px;
   width: 130px;
   transition: 500ms all ease;
+  font-family: 'Quicksand', sans-serif;
 }
 
 h1:hover{
-  color: grey;
+  color: rgb(237, 144, 21);
 }
 
 nav ul{
@@ -116,12 +118,12 @@ nav ul li a{
 
 #categorias ul li a:hover{
   transition: all 330ms ease-in;
-  color: rgb(244, 190, 30);
+  color: rgb(237, 144, 21);
 }
 
 #otros ul li a:hover {
     transition: all 330ms ease-in;
-    color: rgb(244, 190, 30);
+    color: rgb(237, 144, 21);
 }
 
 #otros {
@@ -832,7 +834,7 @@ footer p{
 
   #categorias ul li a:hover{
     transition: all 330ms ease-in;
-    color: rgb(244, 190, 30);
+    color: rgb(237, 144, 21);
   }
 
   #categorias ul li a{
@@ -843,8 +845,8 @@ footer p{
 
   #categorias ul li a:hover{
     transition: all 200ms ease-in;
-    border-bottom: 4px solid rgb(244, 190, 30);;
-    color: rgb(244, 190, 30);
+    border-bottom: 4px solid rgb(237, 144, 21);
+    color: rgb(237, 144, 21);
   }
 
   #menu_living {
@@ -878,12 +880,12 @@ footer p{
 
   #categorias ul li #menu_living li a:hover{
         border-bottom: none;
-        color: rgb(244, 190, 30);
+        color: rgb(237, 144, 21);
     }
 
   #otros ul li a:hover {
       transition: all 330ms ease-in;
-      color: rgb(244, 190, 30);
+      color: rgb(237, 144, 21);
   }
 
   /*#otros {
@@ -1129,8 +1131,8 @@ article .container-articulo-img{
 
   #categorias ul li a:hover{
     transition: all 200ms ease-in;
-    border-bottom: 4px solid rgb(244, 190, 30);
-    color: rgb(244, 190, 30);
+    border-bottom: 4px solid rgb(237, 144, 21);
+    color: rgb(237, 144, 21);
   }
 
   #menu_living {
@@ -1161,12 +1163,12 @@ article .container-articulo-img{
 
   #categorias ul li #menu_living li a:hover{
         border-bottom: none;
-        color: rgb(244, 190, 30);
+        color: rgb(237, 144, 21);
     }
 
   #otros ul li a:hover {
       transition: all 330ms ease-in;
-      color: rgb(244, 190, 30);
+      color: rgb(237, 144, 21);
   }
 
   #otros {
