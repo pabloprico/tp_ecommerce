@@ -577,11 +577,10 @@ footer p{
 
 .form-container{
   width:90%;
-  margin: auto;
-  margin-top: 120px;
+  margin: 5% auto;
 }
 
-.form-container h1{
+.form-container h2{
   font-family:'Lora', serif;
   font-size:2.5em;
   text-align: center;
