@@ -150,6 +150,7 @@ padding: 0;
  border-radius: 20px;
  background-color: white;
  height: 27px;
+ outline: none;
 }
 
 #otros .search button{
@@ -361,7 +362,13 @@ section .container .container-preguntas{
 
 section .buscador{
   margin: 15px 0;
+  outline: none;
 }
+
+section #buscador{
+outline: none;
+}
+
 section .container hr{
   background-color: black;
   width: 80%;
