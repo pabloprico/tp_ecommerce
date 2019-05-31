@@ -570,7 +570,7 @@ footer p{
 
 .form-container{
   width:90%;
-  margin: auto;
+  margin: 5% auto;
 }
 
 .form-container h1{
@@ -578,6 +578,7 @@ footer p{
   font-size:2.5em;
   text-align: center;
   font-weight:400;
+  margin-bottom:5%;
 }
 
 .field-group{
