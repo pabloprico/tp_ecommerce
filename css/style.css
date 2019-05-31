@@ -358,9 +358,7 @@ section .container .container-preguntas{
 
 section .container h2{
   font-family: 'Lora', serif;
-  font-size: 2em;
-  font-weight: 400;
-  text-align: center;
+  
 }
 
 .container-preguntas{
