@@ -356,6 +356,13 @@ section .container .container-preguntas{
   margin-bottom: 2em;
 }
 
+section .container h2{
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+}
+
 .container-preguntas{
   margin-top: 2em;
 }
