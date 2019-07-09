@@ -1,4 +1,4 @@
-<?php/*
+<?php
 	require_once 'func/controller.php';
 
 	if (!isLoged()) {
@@ -7,25 +7,26 @@
 	}
 	$user = $_SESSION['userLoged'];
 
-  echo "<pre>";
-  var_dump($_SESSION);
-  echo "</pre> <br>";
-  echo "<pre>";
-  var_dump($_POST);
-  echo "</pre> <br>";
-  echo "<pre>";
-  var_dump($user);
-  echo "</pre> <br>";
-*/
- ?>
 
- <?php
+
+
+  // echo "<pre>";
+  // var_dump($_SESSION);
+  // echo "</pre> <br>";
+  // echo "<pre>";
+  // var_dump($_POST);
+  // echo "</pre> <br>";
+  // echo "<pre>";
+  // var_dump($user);
+  // echo "</pre> <br>";
+
+
  // Definimos variable para hacer dinamico el title e incluimos el head
    $pageTitle = "Pagina de inicio";
    require_once 'partials/head.php';
   ?>
   <html lang="es" dir="ltr">
-    
+
     <body>
 
       <?php

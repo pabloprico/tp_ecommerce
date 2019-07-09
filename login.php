@@ -28,8 +28,9 @@
               setcookie('userEmail', $emailFromPost, time() + 3600);
             }
           // Logueo y redirecciono
-          $userDB = searchUser($emailFromPost);
-          loginUser($userDB);
+          //$userDB = searchUser($emailFromPost);
+          $userDB = getByEmail($emailFromPost);
+          login($userDB);
           header('location: profile.php');
           exit;
       } else {

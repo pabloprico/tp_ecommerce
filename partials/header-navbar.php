@@ -79,7 +79,7 @@
       </fieldset>
     </form></li> <!--@@ a modo de prueba, despues se cambian por íconos -->
    <li id="menu_hamburguesa"><a href="#"><i class="fas fa-bars"></i></i></a></li>
-   <li><a href="login.html"><i class="fas fa-sign-in-alt"></i></a></li>
+   <li><a href="login.php"><i class="fas fa-sign-in-alt"></i></a></li>
    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
   </ul>
  </nav>

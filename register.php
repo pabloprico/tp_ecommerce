@@ -85,8 +85,8 @@
 
 
 
-          //VERIFICO MAIL DUCPLICADO EN DB
-          $userV = searchUser($_POST['email']);
+          //VERIFICO MAIL DUCPLICADO EN DB // JASON
+          $userV = getByEmail($_POST['email']);
           if ($userV != null && $userV != ""){
             $errores = $errores + 1;
             $vemail = "El email ya está registrado <br>";
@@ -129,38 +129,46 @@
       // Si viene algo por $_FILES...
       if (isset($_FILES['foto'])) {
         // 1. Validamos que el archivo haya subido bien. Si el valor del error es distinto de 0, significa que hubo error
-        if ($_FILES["foto"]["error"] != 0){
+          if ($_FILES["foto"]["error"] != 0){
           $vfoto = "Hubo un error en la carga de la foto";
           $errores = $errores + 1;
-        }
+           }
         // 2. Validamos que el archivo tenga la extension correcta
         //guardo el nombre del archivo en una variable
-        $nombreFoto = $_FILES["foto"]["name"];
-        $ext=pathinfo($nombreFoto, PATHINFO_EXTENSION);
-        if ($ext != "JPG" && $ext!="png"){
-          $vfoto = "La foto debe tener formato png o jpg <br>";
-        } else {
-          // 3. Si no hay errores guardamos el archivo del lado del servidor
-          //guardo el nombre temporal del archivo
-          $origen = $_FILES["foto"]["tmp_name"];
-          $destino = "";
-          $destino = $destino."archivos/";
-          //genero la ruta donde guardo el archivo
-          $destino = $destino.$nombre."fotodeperfil.".$ext;
+        // $nombreFoto = $_FILES["foto"]["name"];
+        // $ext=pathinfo($nombreFoto, PATHINFO_EXTENSION);
+          $nombreFoto = $_FILES["foto"]["name"];
+          $ext = pathinfo($nombreFoto, PATHINFO_EXTENSION);
+          if ($ext != "jpg" && $ext != "png"){
+            $vfoto = "La foto debe tener formato png o jpg <br>";
+            $errores = $errores + 1;
+           }
+        // else {
+        //   // 3. Si no hay errores guardamos el archivo del lado del servidor
+        //   //guardo el nombre temporal del archivo
+        //   $origen = $_FILES["foto"]["tmp_name"];
+        //   $destino = "";
+        //   $destino = $destino."archivos/";
+        //   //genero la ruta donde guardo el archivo
+        //   $destino = $destino.$nombre."fotodeperfil.".$ext;
+        //
+        //   //guardo el archivo con esta funcion
+        //   move_uploaded_file($origen,$destino);
+        //   $vfoto = "Archivo subido con exito";
+        // }
+      }
 
-          //guardo el archivo con esta funcion
-          move_uploaded_file($origen,$destino);
-          $vfoto = "Archivo subido con exito";
-        }
-        }
-
-
+        // se podria implemntar una estructura try catch para el guardados de fotos o usuarios
   //  -------------------  GUARDO INFO USUARIO NUEVO   ---------------------
       if($errores == 0){
-        if (saveUser()){
-          loginUser($userV);
-          header('location:profile.php');
-        };
+        // if (saveUser()){
+        //   $userok = getByEmail($_POST["email"]);
+        //   login($userok);
+        //   header('location:profile.php');
+        // }
+  //se podria agregar una estructura try catch por si falla el registro del user.
+        login(saveUser());
+        header('location:profile.php');
       }
   //  -------------------  -------------------------   ---------------------
 
