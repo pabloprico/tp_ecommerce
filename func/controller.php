@@ -154,7 +154,7 @@ if (isset($_COOKIE['userEmail'])) {
 
   //guardo el archivo con esta funcion
   move_uploaded_file($origen,$destino);
-  //$vfoto = "Archivo subido con exito";
+  $vfoto = "Archivo subido con exito";
 
   $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
   $usuario = [
@@ -196,7 +196,7 @@ function validateLogin($emailPost, $passPost){
 // FALTA PROBAR BIEN EL REGISTER Y LOGIN.
 // FALTA PROBAR BIEN COKIES Y SESSION. LO BASICO DE SESION FUNCIONA PORQUE EN PROFILE MUESTRA LOS DATOS DEL USER CONECTADO.
 
-// No muestra mensaje de error de contraseña ni de usuario en loguin.
+// No muestra mensaje de error de contraseña ni de usuario en loguin.- CORREGIDO
 // Falta agregar para poder loguearse desde username. Que se puede agregar en el mismo campo.
 
 ?>

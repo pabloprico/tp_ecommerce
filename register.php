@@ -150,7 +150,7 @@
         //   $destino = "";
         //   $destino = $destino."archivos/";
         //   //genero la ruta donde guardo el archivo
-        //   $destino = $destino.$nombre."fotodeperfil.".$ext;
+        //   $destino = $destino."fotodeperfil.".$nombre.".".$ext;
         //
         //   //guardo el archivo con esta funcion
         //   move_uploaded_file($origen,$destino);

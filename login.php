@@ -67,11 +67,12 @@
       <form class="access-form" action="" method="post">
         <div class="field-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" value="" required>
+          <input type="email" id="email" name="email" value="" required class="<?php echo $vpass != "" ? "error" : null ?>">
         </div>
         <div class="field-group">
           <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" value="" required>
+          <input type="password" id="password" name="password" value="" required class="<?php echo $vpass != "" ? "error" : null ?>">
+          <em class="form-error-validate"><?php echo $vpass?></em>
         </div>
         <div class="remember-me">
           <input type="checkbox" id="remember-me" name="remember-me" value="">
