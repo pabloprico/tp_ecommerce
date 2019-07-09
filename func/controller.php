@@ -196,6 +196,7 @@ function validateLogin($emailPost, $passPost){
 // FALTA PROBAR BIEN EL REGISTER Y LOGIN.
 // FALTA PROBAR BIEN COKIES Y SESSION. LO BASICO DE SESION FUNCIONA PORQUE EN PROFILE MUESTRA LOS DATOS DEL USER CONECTADO.
 
-
+// No muestra mensaje de error de contraseña ni de usuario en loguin.
+// Falta agregar para poder loguearse desde username. Que se puede agregar en el mismo campo.
 
 ?>
