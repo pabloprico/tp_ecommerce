@@ -34,17 +34,17 @@
      ?>
 		<h1>Bienvenida/o <?php echo $user['nombre'] ?></h1>
 		<p>Tu email es: <a href="mailto:<?= $user['email'] ?>"> <?= $user['email'] ?> </a></p>
-    <h2 style="text-align:center; font-size: 40px; font-family:'Lora', serif; margin-top:80px">Mi Cuenta</h2>
-		<a style="display: block; text-align:center; text-decoration:none; color: black;" href="logout.php">Salir</a>
+    <h2 id="titulo-perfil">Mi Cuenta</h2>
+		<a id= "salir" href="logout.php">Salir</a>
 
-    <div id="perfil" style="display:flex; justify-content: space-around; margin-top:120px">
+    <div id="perfil">
 
-      <div class="perfil-caja" style="margin-bottom: 150px;">
-        <a href="#" style="font-family:'Lora'; font-size: 28px;  text-decoration: none; color: black">Historial de Compras</a>
+      <div class="perfil-caja">
+        <a href="#">Historial de Compras</a>
       </div>
 
       <div class="perfil-caja">
-        <a href="#" style="font-family:'Lora'; font-size: 28px; text-decoration: none; color: black">Detalles de la Cuenta</a>
+        <a href="#">Detalles de la Cuenta</a>
       </div>
 
     </div>
