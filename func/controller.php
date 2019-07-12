@@ -141,7 +141,8 @@ if (isset($_COOKIE['userEmail'])) {
   function saveUser(){
   // 2. Validamos que el archivo tenga la extension correcta
   //guardo el nombre del archivo en una variable
-  $nombreFoto = $_FILES["foto"]["name"];
+  $nombreFoto = ($_FILES["foto"]["name"]);
+	$nombreFoto = strtolower($nombreFoto);
   $ext=pathinfo($nombreFoto, PATHINFO_EXTENSION);
   // 3. Si no hay errores guardamos el archivo del lado del servidor
   //guardo el nombre temporal del archivo
@@ -191,10 +192,11 @@ function validateLogin($emailPost, $passPost){
 
 //verificar login correcto en profile -CORRECTO
 // verificar que guarde correctamente la barra en la direccion de perfil de json FOTO
+// verificar subida de imagens con extension en mayus. ---CORREGIDO
 // verificar el style del mail en el profile.
 // el boton lo loguin debe llamar a la pagina loguin.php. EN HEADER -CORREGIDO
-// FALTA PROBAR BIEN EL REGISTER Y LOGIN.
-// FALTA PROBAR BIEN COKIES Y SESSION. LO BASICO DE SESION FUNCIONA PORQUE EN PROFILE MUESTRA LOS DATOS DEL USER CONECTADO.
+// FALTA PROBAR BIEN EL REGISTER Y LOGIN. -- OK
+// FALTA PROBAR BIEN COKIES Y SESSION. LO BASICO DE SESION FUNCIONA PORQUE EN PROFILE MUESTRA LOS DATOS DEL USER CONECTADO.-- OK
 
 // No muestra mensaje de error de contraseña ni de usuario en loguin.- CORREGIDO
 // Falta agregar para poder loguearse desde username. Que se puede agregar en el mismo campo.

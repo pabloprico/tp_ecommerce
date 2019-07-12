@@ -138,6 +138,7 @@
         // $nombreFoto = $_FILES["foto"]["name"];
         // $ext=pathinfo($nombreFoto, PATHINFO_EXTENSION);
           $nombreFoto = $_FILES["foto"]["name"];
+          $nombreFoto = strtolower($nombreFoto);
           $ext = pathinfo($nombreFoto, PATHINFO_EXTENSION);
           if ($ext != "jpg" && $ext != "png"){
             $vfoto = "La foto debe tener formato png o jpg <br>";
